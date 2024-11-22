@@ -13,8 +13,7 @@ let loyaltyRate = 2; //2 points per $1
 
 //function
 function getCartTotal(newItemPrice, cartTotal) {
-  let finalPrice = newItemPrice + cartTotal;
-  return finalPrice;
+  return newItemPrice + cartTotal;
 }
 //Endpoint 1
 app.get('/cart-total', (req, res) => {
