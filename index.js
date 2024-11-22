@@ -25,18 +25,18 @@ app.get('/cart-total', (req, res) => {
 
 //function to apply discount for member
 function membershipDiscount(cartTotal, isMember) {
-  if (isMember === 'true') {
-    let finalPrice = cartTotal - (cartTotal * discountPercentage) / 100;
-    return finalPrice.toString();
+  let finalPrice;
+  if (isMember) {
+    return finalPrice = cartTotal - (cartTotal * discountPercentage / 100);
   } else {
-    return cartTotal;
+    return finalPrice = cartTotal;
   }
 }
 
 //Endpoint 2
 app.get('/membership-discount', (req, res) => {
   let cartTotal = parseFloat(req.query.cartTotal);
-  let isMember = req.query.isMember;
+  let isMember = req.query.isMember === "true";
 
   res.send(membershipDiscount(cartTotal, isMember).toString());
 });
