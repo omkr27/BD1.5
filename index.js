@@ -74,8 +74,7 @@ app.get('/estimate-delivery', (req, res) => {
 
 //function
 function getShippingCost(weight, distance) {
-  let finalCost = weight * distance * 0.1;
-  return 'Shipping cost will be ₹ ' + finalCost;
+  return finalCost = weight * distance * 0.1;
 }
 
 //Endpoint 5
