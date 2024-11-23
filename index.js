@@ -86,12 +86,7 @@ app.get('/shipping-cost', (req, res) => {
 
 //function to return loyalty amount after purchase
 function getLoyaltyPoints(purchaseAmount) {
-  let finalPoints = loyaltyRate * purchaseAmount;
-  return (
-    'Available Loyalty points after recent purchase are ' +
-    finalPoints +
-    ' Points.'
-  );
+  return finalPoints = loyaltyRate * purchaseAmount;
 }
 
 //Endpoint 6
