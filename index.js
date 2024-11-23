@@ -56,12 +56,10 @@ app.get('/calculate-tax', (req, res) => {
 function estimateDelivery(shippingMethod, distance) {
   let standard;
   let express;
-  if (shippingMethod === 'standard') {
-    let calcDate = (1 * distance) / 50;
-    return 'Item will be delivered in ' + calcDate + ' days.';
+  if (shippingMethod === 'standard') { 
+    return (1 * distance) / 50;
   } else if (shippingMethod === 'express') {
-    let calcDate = (1 * distance) / 100;
-    return 'Item will be delivered in ' + calcDate + ' days.';
+    return (1 * distance) / 100;
   } else {
     return 'Enter Valid shipping method';
   }
